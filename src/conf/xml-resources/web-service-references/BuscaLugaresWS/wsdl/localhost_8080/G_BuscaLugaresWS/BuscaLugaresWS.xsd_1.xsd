@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2.1-hudson-28-. --><xs:schema xmlns:tns="http://logica.blWS.ads/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://logica.blWS.ads/">
+
+<xs:element name="placeDetails" type="tns:placeDetails" />
+
+<xs:element name="placeDetailsResponse" type="tns:placeDetailsResponse" />
+
+<xs:element name="placeSearch" type="tns:placeSearch" />
+
+<xs:element name="placeSearchResponse" type="tns:placeSearchResponse" />
+
+<xs:complexType name="placeDetails">
+<xs:sequence>
+<xs:element name="reference" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="placeDetailsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:lugar" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lugar">
+<xs:sequence>
+<xs:element name="clasificacion" type="xs:string" minOccurs="0" />
+<xs:element name="direccion" type="xs:string" minOccurs="0" />
+<xs:element name="icono" type="xs:string" minOccurs="0" />
+<xs:element name="id" type="xs:string" minOccurs="0" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+<xs:element name="numeroTelefonoF" type="xs:string" minOccurs="0" />
+<xs:element name="numeroTelefonoI" type="xs:string" minOccurs="0" />
+<xs:element name="referencia" type="xs:string" minOccurs="0" />
+<xs:element name="url" type="xs:string" minOccurs="0" />
+<xs:element name="vecindario" type="xs:string" minOccurs="0" />
+<xs:element name="web" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="placeSearch">
+<xs:sequence>
+<xs:element name="query" type="xs:string" minOccurs="0" />
+<xs:element name="place" type="xs:string" minOccurs="0" />
+<xs:element name="type" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="placeSearchResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:lugar" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
