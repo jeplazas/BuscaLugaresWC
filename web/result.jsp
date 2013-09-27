@@ -78,7 +78,7 @@
             </tr>
             <tr>
                 <td> Place's G+ url: </td>
-                <% if (url != "~") {%>
+                <% if (!url.startsWith("~")) {%>
                     <td> <a href="<%= url%>"> <%= nombre%> </a> </td>
                 <% } else {%>
                     <td> <%= url%> </td>
@@ -90,13 +90,14 @@
             </tr>
             <tr>
                 <td> Place's webSite: </td>
-                <% if (web != "~") {%>
+                <% if (!web.startsWith("~")) {%>
                     <td> <a href="<%= web%>"> <%= nombre%> </a> </td>
                 <% } else {%>
                     <td> <%= web%> </td>
                 <% }%>
             </tr>
         </table>
+            <INPUT Type="button" VALUE="Go Back" onClick="history.go(-1);return true;">
     </center>
 </body>
 </html>
